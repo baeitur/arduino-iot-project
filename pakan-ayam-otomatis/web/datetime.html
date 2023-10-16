@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Hello, world!</title>
+    <style>
+      .datetime {
+        margin-top: 10em;
+        margin-bottom: 2em;
+      }
+      .setting {
+        margin-top: 3em;
+        margin-bottom: 7em;
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body class="bg-light">
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-sm">
+          <marquee style="font-weight: bolder" class="navbar-brand" href="#"
+            >PAKAN AYAM OTOMATIS BERBASIS IOT</marquee
+          >
+        </div>
+        <a href="" class="btn btn-primary mx-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-box-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+            />
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <!-- END NAVBAR -->
+
+    <!-- jam -->
+    <form action="" id="inputDateTime">
+      <section class="w-100 datetime">
+        <div class="container mx-auto">
+          <div class="row row-cols-1 row-cols-md-1 g-4">
+            <div class="col text-center">
+              <div class="jam">
+                <input
+                  type="time"
+                  class="display-2 fw-bold border-0"
+                  id="time"
+                />
+              </div>
+              <div class="tanggal mt-4">
+                <!-- <span class="text-success">Sabtu, 17 Januari 2023</span> -->
+                <input type="date" class="display-6 border-0" id="date" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end jam -->
+
+      <!-- SETTING -->
+      <section class="setting">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div
+                class="card h-100 text-white mb-3 text-center border-light bg-light"
+              >
+                <div class="card-body text-dark"></div>
+
+                <a href="./index.html" class="btn btn-danger w-100">KEMBALI</a>
+              </div>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+              <div
+                class="card h-100 text-white mb-3 text-center border-light bg-light"
+              >
+                <div class="card-body text-dark"></div>
+                <button
+                  class="btn btn-success w-100"
+                  type="submit"
+                  name="simpan"
+                >
+                  SIMPAN
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    <!-- END SETTING -->
+
+    <footer class="bg-secondary fixed-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 py-2 text-center">
+            @ 2023 Copyright: Universitas Muhammadiyah Malang
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/datetime.js" type="text/javascript"></script>
+  </body>
+</html>
